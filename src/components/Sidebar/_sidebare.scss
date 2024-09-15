@@ -1,0 +1,78 @@
+.sidebar {
+  height: 900px;
+  vertical-align: top;
+  background-color: #262421;
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 10px;
+  &__inside {
+    position: absolute;
+    width: 200px;
+    &__Button {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      background-color: #769656;
+      border: 1px solid #769656;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, width 0.5s;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &_Group {
+        display: flex;
+        gap: 5px;
+        overflow: hidden;
+        padding: 10px 0;
+        transition: max-height 0.5s;
+
+        &--show {
+          max-height: 400px;
+        }
+        &--hide {
+          padding: 0;
+          max-height: 0;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__move-list {
+    margin: 10px 0;
+    color: #F5F5F5;
+    .move {
+      &__index {
+        padding: 0 5px;
+        color: darkgray;
+      }
+      &__row {
+        padding: 3px 0;
+        display: flex;
+      }
+      &__row:nth-child(even) {
+       background-color:  #312e2b;
+      }
+      &__item {
+        font-weight: bold;
+        width: 40%;
+      }
+    }
+  }
+}

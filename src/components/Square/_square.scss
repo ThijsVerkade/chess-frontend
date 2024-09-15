@@ -1,0 +1,64 @@
+.square {
+  height: 12.5%;
+  width: 12.5%;
+  border: 1px black;
+  float: left;
+  background-color: #EEEED2;
+
+  &--selected {
+    background-color: rgb(243, 246, 135) !important;
+  }
+
+  &__image {
+    transform: translate(0, 0);
+    background-color: transparent;
+
+    &--dragging img{
+      cursor: grab;
+    }
+
+    .selected {
+      background-color: rgb(255, 255, 0);
+    }
+  }
+
+  &__image:hover {
+    cursor: grab;
+  }
+
+  &__image img {
+    height: 90%;
+    margin: 5%;
+    width: 90%;
+    background: none;
+  }
+  &__available {
+    width: 33%;
+    padding-top: 33%;
+    margin-top: 33%;
+    margin-left: 33%;
+    background-color: black;
+    opacity: 0.1;
+    border-radius: 50%;
+  }
+  &__available-with-image {
+    width: 87%;
+    padding-top: 87%;
+    margin-top: -102%;
+    border: 7px solid black;
+    opacity: 0.1;
+    border-radius: 50%;
+  }
+}
+
+.square:nth-child(-2n+8),
+.square:nth-child(8) ~ .square:nth-child(-2n+15),
+.square:nth-child(16) ~ .square:nth-child(-2n+24),
+.square:nth-child(24) ~ .square:nth-child(-2n+31),
+.square:nth-child(32) ~ .square:nth-child(-2n+40),
+.square:nth-child(40) ~ .square:nth-child(-2n+47),
+.square:nth-child(48) ~ .square:nth-child(-2n+56),
+.square:nth-child(56) ~ .square:nth-child(-2n+63) {
+  background-color: #769656;
+}
+

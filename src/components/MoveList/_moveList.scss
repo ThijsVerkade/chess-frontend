@@ -1,0 +1,35 @@
+.MoveList {
+  height: 100%;
+  width: 400px;
+  background: #282c34;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &__Items {
+    background: #F5F5F5;
+    margin: 20px;
+    overflow-x: auto;
+  }
+}
+
+.MoveItem {
+  height: 90px;
+  border: solid #769656;
+  width: 100%;
+  display: flex;
+
+  &__Header, &__Body, &__Footer {
+    height: 100%;
+  }
+
+  &__Header {
+    width: 30%;
+  }
+  &__Body {
+    width: 50%;
+  }
+  &__Footer {
+    width: 20%;
+  }
+}

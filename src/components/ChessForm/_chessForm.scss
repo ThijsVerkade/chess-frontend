@@ -1,0 +1,92 @@
+.ChessForm {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+
+  &__Gif {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  &__Group {
+    overflow: hidden;
+    margin: 10px 0;
+    transition: max-height 0.5s;
+    &--show {
+      max-height: 400px;
+    }
+    &--hide {
+      margin: 0;
+      max-height: 0;
+    }
+  }
+
+  &__Label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+   &__InputGroup {
+     display: flex;
+     padding-bottom: 10px;
+     .InputGroup {
+
+       &__Input {
+         width: 100%;
+         padding: 6px 12px;
+         font-size: 14px;
+         border: 1px solid #ced4da;
+         border-radius: 4px;
+         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+         &:focus {
+           outline: 0;
+         }
+       }
+     }
+   }
+
+  &__Button {
+    width: 50%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #769656;
+    border: 1px solid #769656;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, width 0.5s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:hover {
+      width: 150%;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &_Group {
+      display: flex;
+      gap: 5px;
+      overflow: hidden;
+      padding: 10px 0;
+      transition: max-height 0.5s;
+
+      &--show {
+        max-height: 400px;
+      }
+      &--hide {
+        padding: 0;
+        max-height: 0;
+      }
+    }
+  }
+}
